@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.weather_activity.today.TodayFragment">
+
+    <ImageView
+        android:id="@+id/imageViewWeatherIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_wb_sunny_24px" />
+
+    <TextView
+
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewWeatherIcon"
+        tools:text="London" />
+
+    <TextView
+        android:textColor="@color/light_blue_600"
+        android:padding="4dp"
+        android:id="@+id/textViewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocation"
+        tools:text="1\u00B0C" />
+
+    <TextView
+        android:textColor="@color/light_blue_600"
+        android:padding="4dp"
+        android:id="@+id/textViewWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTemperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        tools:text="Sunny" />
+
+    <View
+
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/light_blue_600"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/textViewWeather"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewTemperature"
+        app:layout_constraintTop_toTopOf="@id/textViewWeather" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTemperature"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="?android:attr/listDivider"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageViewРumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        app:layout_constraintTop_toTopOf="@id/divider3"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPrecipitation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_weather_pouring"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <ImageView
+        android:id="@+id/imageViewPrecipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewРumidity"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTempirature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewРumidity"
+        android:src="@drawable/ic_water_outline" />
+
+    <ImageView
+        android:id="@+id/textViewTempirature"
+        android:src="@drawable/ic_snowflake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPrecipitation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPrecipitation" />
+
+    <TextView
+        android:id="@+id/ValueTempirature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow_google"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewTempirature"
+        app:layout_constraintRight_toRightOf="@+id/textViewTempirature"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempirature"
+        tools:text="none" />
+
+    <TextView
+        android:id="@+id/ValueРumidity"
+        style="@style/Base.Widget.MaterialComponents.TextView.BodyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/imageViewРumidity"
+        app:layout_constraintRight_toRightOf="@+id/imageViewРumidity"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewРumidity"
+        tools:text="1.0 mm" />
+
+    <TextView
+        android:id="@+id/ValuePrecipitation"
+        style="@style/Base.Widget.MaterialComponents.TextView.BodyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/imageViewPrecipitation"
+        app:layout_constraintRight_toRightOf="@+id/imageViewPrecipitation"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPrecipitation"
+        tools:text="1019 hPa" />
+
+    <ImageView
+        android:id="@+id/ic_compass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/ic_weather_windy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ValuePrecipitation"
+        app:srcCompat="@drawable/ic_compass_outline" />
+
+    <ImageView
+        android:id="@+id/ic_weather_windy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_compass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_compass"
+        app:srcCompat="@drawable/ic_weather_windy" />
+
+    <TextView
+        android:id="@+id/tv_compass_value"
+        style="@style/Base.Widget.MaterialComponents.TextView.BodyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/ic_compass"
+        app:layout_constraintRight_toRightOf="@id/ic_compass"
+        app:layout_constraintTop_toBottomOf="@+id/ic_compass"
+        tools:layout_editor_absoluteX="112dp"
+        tools:text="20 km/h" />
+
+    <TextView
+        android:id="@+id/tv_weather_windy_value"
+        style="@style/Base.Widget.MaterialComponents.TextView.BodyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/ic_weather_windy"
+        app:layout_constraintRight_toRightOf="@id/ic_weather_windy"
+        app:layout_constraintTop_toBottomOf="@+id/ic_weather_windy"
+        tools:text="SE" />
+
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        android:text="@string/share"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_compass_value" />
+</androidx.constraintlayout.widget.ConstraintLayout>

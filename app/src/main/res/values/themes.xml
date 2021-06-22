@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WigetAndroidWeather" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/light_blue_600</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/light_blue_600</item>
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- toolbar style-->
+
+    </style>
+
+    <style name="ThemeOverlay.WigetAndroidWeather.AppWidgetContainer" parent="">
+        <item name="appWidgetBackgroundColor">@color/white</item>
+        <item name="appWidgetTextColor">@color/black</item>
+    </style>
+
+    <style name="Base.Widget.MaterialComponents.TextView.BodyStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/yellow_google</item>
+    </style>
+
+    <style name="Theme.WigetAndroidWeather.Fullscreen" parent="Theme.WigetAndroidWeather">
+        <item name="android:actionBarStyle">
+            @style/Widget.Theme.WigetAndroidWeather.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+
+
+
+
+
+</resources>
